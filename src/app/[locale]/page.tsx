@@ -1,5 +1,6 @@
 import { emojis, categories, categorySlugs, twemojiUrl, getCategoryCount } from '@/data/emojis';
 import { Smile, Cat, Apple, Trophy, Plane, Lightbulb, Heart, Flag, Search, ArrowRight } from 'lucide-react';
+import { AdSlot } from '@/components/ui/AdSlot';
 import Link from 'next/link';
 
 const catIcons: Record<string, any> = { 'Smileys & People': Smile, 'Animals & Nature': Cat, 'Food & Drink': Apple, 'Activities': Trophy, 'Travel & Places': Plane, 'Objects': Lightbulb, 'Symbols': Heart, 'Flags': Flag };
