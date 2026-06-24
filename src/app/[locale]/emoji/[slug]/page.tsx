@@ -1,6 +1,6 @@
 import { emojis, twemojiUrl, emojiSlug } from '@/data/emojis';
 import Link from 'next/link';
-import { Copy, ArrowLeft } from 'lucide-react';
+import { Copy, ArrowLeft, Share2, Twitter } from 'lucide-react';
 import { CopyButton } from './CopyButton';
 import { locales, type Locale } from '@/lib/i18n';
 
@@ -15,6 +15,17 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     return {
       title: `${emoji.name} (${emoji.char}) Meaning & Definition | EmojiDict`,
       description: emoji.description,
+      openGraph: {
+        title: `${emoji.name} (${emoji.char}) Meaning`,
+        description: emoji.description,
+        images: [{ url: twemojiUrl(emoji.codepoint), width: 120, height: 120, alt: emoji.name }],
+        type: 'article',
+      },
+      twitter: {
+        card: 'summary',
+        title: `${emoji.name} (${emoji.char}) Meaning`,
+        description: emoji.description,
+      },
     };
   });
 }

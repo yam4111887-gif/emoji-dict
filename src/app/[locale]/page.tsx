@@ -2,7 +2,7 @@ import { emojis, categories, categorySlugs, twemojiUrl, getCategoryCount } from 
 import { Smile, Cat, Apple, Trophy, Plane, Lightbulb, Heart, Flag, Search, ArrowRight } from 'lucide-react';
 import { AdSlot } from '@/components/ui/AdSlot';
 import Link from 'next/link';
-import { locales, type Locale } from '@/lib/i18n';
+import { locales, type Locale, t } from '@/lib/i18n';
 
 const catIcons: Record<string, any> = { 'Smileys & People': Smile, 'Animals & Nature': Cat, 'Food & Drink': Apple, 'Activities': Trophy, 'Travel & Places': Plane, 'Objects': Lightbulb, 'Symbols': Heart, 'Flags': Flag };
 
@@ -20,12 +20,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <div>
       {/* Hero */}
       <section className="bg-gradient-to-b from-amber-50 to-white px-4 py-16 text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Emoji Meanings Dictionary</h1>
-        <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">Search and explore 600+ emoji meanings, definitions, keywords, and Unicode codepoints. Free and fast.</p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">{t(loc, 'home.hero_title')}</h1>
+        <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">{t(loc, 'home.hero_subtitle')}</p>
         <form action={`/${loc}/search`} method="get" className="max-w-md mx-auto relative">
-          <input type="text" name="q" placeholder="Search for an emoji meaning..." className="w-full rounded-xl border border-slate-200 px-5 py-3 pl-12 text-base shadow-sm" aria-label="Search emoji" />
+          <input type="text" name="q" placeholder={t(loc, 'common.search_placeholder')} className="w-full rounded-xl border border-slate-200 px-5 py-3 pl-12 text-base shadow-sm" aria-label={t(loc, 'common.search')} />
           <Search className="absolute left-4 top-3.5 text-slate-400" size={20} />
-          <button type="submit" className="absolute right-2 top-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-white hover:bg-amber-600">Search</button>
+          <button type="submit" className="absolute right-2 top-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-white hover:bg-amber-600">{t(loc, 'common.search')}</button>
         </form>
       </section>
 
