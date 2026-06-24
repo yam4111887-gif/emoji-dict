@@ -2,6 +2,7 @@ import { emojis, twemojiUrl, emojiSlug } from '@/data/emojis';
 import Link from 'next/link';
 import { Copy, ArrowLeft } from 'lucide-react';
 import { CopyButton } from './CopyButton';
+import { locales, type Locale } from '@/lib/i18n';
 
 export function generateStaticParams() {
   return emojis.map(e => ({ slug: emojiSlug(e.name) }));
@@ -18,8 +19,9 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
   });
 }
 
-export default async function EmojiPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function EmojiPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params;
+  const loc: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : 'en';
   const emoji = emojis.find(e => emojiSlug(e.name) === slug);
   if (!emoji) return <div className="max-w-2xl mx-auto px-4 py-20 text-center"><p className="text-slate-500">Emoji not found.</p></div>;
 
@@ -31,7 +33,7 @@ export default async function EmojiPage({ params }: { params: Promise<{ slug: st
   return (
     <div>
       <div className="max-w-3xl mx-auto px-4 py-8">
-        <Link href="/en" className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-amber-600 mb-6"><ArrowLeft size={14} /> Back</Link>
+        <Link href={`/${loc}`} className="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-amber-600 mb-6"><ArrowLeft size={14} /> Back</Link>
 
         {/* Hero */}
         <div className="text-center mb-8">
@@ -47,7 +49,7 @@ export default async function EmojiPage({ params }: { params: Promise<{ slug: st
             <div><span className="text-slate-500">Emoji:</span> <span className="font-mono text-lg">{emoji.char}</span></div>
             <div><span className="text-slate-500">Codepoint:</span> <span className="font-mono">{codepointHex}</span></div>
             <div><span className="text-slate-500">HTML Entity:</span> <span className="font-mono">{htmlEntity}</span></div>
-            <div><span className="text-slate-500">Category:</span> <Link href={`/en/category/${emoji.category.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`} className="text-amber-600 hover:underline">{emoji.category}</Link></div>
+            <div><span className="text-slate-500">Category:</span> <Link href={`/${loc}/category/${emoji.category.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`} className="text-amber-600 hover:underline">{emoji.category}</Link></div>
           </div>
         </div>
 
@@ -70,7 +72,7 @@ export default async function EmojiPage({ params }: { params: Promise<{ slug: st
           <h2 className="text-lg font-bold text-slate-900 mb-3">Related Emojis</h2>
           <div className="grid grid-cols-6 sm:grid-cols-12 gap-2">
             {related.map(r => (
-              <Link key={r.codepoint} href={`/en/emoji/${emojiSlug(r.name)}`} className="flex flex-col items-center p-2 rounded-lg hover:bg-amber-50">
+              <Link key={r.codepoint} href={`/${loc}/emoji/${emojiSlug(r.name)}`} className="flex flex-col items-center p-2 rounded-lg hover:bg-amber-50">
                 <img src={twemojiUrl(r.codepoint)} alt={r.name} width="32" height="32" loading="lazy" />
               </Link>
             ))}

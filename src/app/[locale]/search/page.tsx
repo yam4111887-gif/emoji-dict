@@ -4,11 +4,13 @@ import { useSearchParams } from 'next/navigation';
 import { emojis, twemojiUrl, emojiSlug } from '@/data/emojis';
 import Link from 'next/link';
 import { Search } from 'lucide-react';
+import { useParams } from 'next/navigation';
 
 function SearchResults() {
   const params = useSearchParams();
   const initialQ = params.get('q') || '';
   const [q, setQ] = useState(initialQ);
+  const { locale } = useParams<{ locale: string }>();
   const results = q ? emojis.filter(e => e.name.toLowerCase().includes(q.toLowerCase()) || e.keywords.some(k => k.includes(q.toLowerCase())) || e.category.toLowerCase().includes(q.toLowerCase())) : [];
 
   return (
@@ -21,7 +23,7 @@ function SearchResults() {
       <p className="text-sm text-slate-500 mb-4">{results.length} results</p>
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
         {results.map(e => (
-          <Link key={e.codepoint} href={`/en/emoji/${emojiSlug(e.name)}`} className="bg-white rounded-lg border border-slate-200 p-3 hover:shadow-md transition flex flex-col items-center text-center">
+          <Link key={e.codepoint} href={`/${locale}/emoji/${emojiSlug(e.name)}`} className="bg-white rounded-lg border border-slate-200 p-3 hover:shadow-md transition flex flex-col items-center text-center">
             <img src={twemojiUrl(e.codepoint)} alt={e.name} width="40" height="40" loading="lazy" className="mb-2" />
             <span className="text-xs font-medium text-slate-700 truncate max-w-full">{e.name}</span>
           </Link>
