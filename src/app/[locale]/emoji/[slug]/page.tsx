@@ -5,8 +5,11 @@ import { CopyButton } from './CopyButton';
 import { locales, type Locale, t } from '@/lib/i18n';
 import { AdSlot } from '@/components/ui/AdSlot';
 
+export const revalidate = 86400; // Revalidate daily (ISR)
+
 export function generateStaticParams() {
-  return emojis.map(e => ({ slug: emojiSlug(e.name) }));
+  // Only prerender top 200 popular emojis to keep build size manageable
+  return emojis.slice(0, 200).map(e => ({ slug: emojiSlug(e.name) }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }) {
