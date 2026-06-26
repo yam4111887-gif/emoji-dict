@@ -22,8 +22,9 @@ export const metadata: Metadata = {
     icon: '/icon.svg',
     apple: '/apple-icon.png',
   },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body className="min-h-screen bg-white text-slate-900 antialiased">{children}</body></html>;
+  return <html lang="en"><head><meta name="theme-color" content="#f59e0b" /></head><body className="min-h-screen bg-white text-slate-900 antialiased">{children}</body></html>;
 }
