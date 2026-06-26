@@ -21,7 +21,26 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   languages['x-default'] = `${SITE_URL}/en`;
   return {
     metadataBase: new URL(SITE_URL),
-    alternates: { canonical: `${SITE_URL}/${locale}`, languages },
+    title: {
+      default: 'EmojiDict — Emoji Meanings, Definitions & Usage',
+      template: '%s',
+    },
+    description: 'Search and discover the meaning of every emoji. Free online emoji dictionary with definitions, keywords, and usage examples.',
+    openGraph: {
+      title: 'EmojiDict — Emoji Meanings & Definitions',
+      description: 'Search 600+ emojis with clear meanings, keywords, Unicode codepoints, and usage examples.',
+      url: `${SITE_URL}/${locale}`,
+      siteName: 'EmojiDict',
+      images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'EmojiDict' }],
+      locale: locale.replace('-', '_'),
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'EmojiDict — Emoji Meanings & Definitions',
+      description: 'Search 600+ emojis with clear meanings, keywords, and usage examples.',
+      images: ['/og-image.png'],
+    },
   };
 }
 

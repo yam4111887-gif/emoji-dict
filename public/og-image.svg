@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#fffbeb"/>
+  <rect width="1200" height="630" fill="url(#grad)"/>
+  <defs>
+    <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <circle cx="600" cy="200" r="80" fill="#f59e0b"/>
+  <circle cx="570" cy="185" r="8" fill="#1e293b"/>
+  <circle cx="630" cy="185" r="8" fill="#1e293b"/>
+  <path d="M565 225 Q600 250 635 225" stroke="#1e293b" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <text x="600" y="370" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="bold" fill="#1e293b">EmojiDict</text>
+  <text x="600" y="430" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#64748b">Emoji Meanings, Definitions &amp; Usage</text>
+  <text x="600" y="475" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#94a3b8">600+ emojis · 30 languages · Free</text>
+</svg>

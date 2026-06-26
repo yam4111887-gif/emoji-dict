@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Menu, X, Search } from 'lucide-react';
 import { t, type Locale } from '@/lib/i18n';
 import { usePathname } from 'next/navigation';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navbar({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
@@ -32,8 +33,9 @@ export function Navbar({ locale }: { locale: string }) {
               className="w-48 rounded-lg border border-slate-200 px-3 py-1.5 pl-9 text-sm" aria-label={t(loc, 'common.search')} />
             <Search size={14} className="absolute left-3 top-2 text-slate-400" />
           </form>
+          <LanguageSwitcher currentLocale={loc} />
         </nav>
-        <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label={t(loc, 'common.search')}>
+        <button className="lg:hidden" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -47,6 +49,7 @@ export function Navbar({ locale }: { locale: string }) {
           <Link href={`/${locale}`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.home')}</Link>
           <Link href={`/${locale}/categories`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.categories')}</Link>
           <Link href={`/${locale}/blog`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.blog')}</Link>
+          <div className="py-2"><LanguageSwitcher currentLocale={loc} /></div>
         </div>
       )}
     </header>

@@ -1,18 +1,34 @@
 import { categories, categorySlugs, getCategoryCount, twemojiUrl, emojis } from '@/data/emojis';
 import Link from 'next/link';
 import { Smile, Cat, Apple, Trophy, Plane, Lightbulb, Heart, Flag } from 'lucide-react';
-import { locales, type Locale } from '@/lib/i18n';
+import { locales, type Locale, t } from '@/lib/i18n';
+import { AdSlot } from '@/components/ui/AdSlot';
+
 const icons: Record<string, any> = { 'Smileys & People': Smile, 'Animals & Nature': Cat, 'Food & Drink': Apple, 'Activities': Trophy, 'Travel & Places': Plane, 'Objects': Lightbulb, 'Symbols': Heart, 'Flags': Flag };
 
-export const metadata = { title: 'All Emoji Categories | EmojiDict', description: 'Browse all emoji categories.' };
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const loc: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : 'en';
+  const SITE_URL = 'https://emojidict.com';
+  const languages: Record<string, string> = {};
+  for (const l of locales) {
+    languages[l] = `${SITE_URL}/${l}/categories`;
+  }
+  languages['x-default'] = `${SITE_URL}/en/categories`;
+  return {
+    title: `${t(loc, 'nav.categories')} | EmojiDict`,
+    description: t(loc, 'site.description'),
+    alternates: { canonical: `${SITE_URL}/${loc}/categories`, languages },
+  };
+}
 
 export default async function CategoriesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const loc: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : 'en';
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-slate-900 mb-2">Emoji Categories</h1>
-      <p className="text-slate-600 mb-8">Browse 600+ emojis by category.</p>
+      <h1 className="text-3xl font-bold text-slate-900 mb-2">{t(loc, 'nav.categories')}</h1>
+      <p className="text-slate-600 mb-8">{t(loc, 'home.browse_categories')}</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {categories.map(cat => {
           const Icon = icons[cat] || Smile;
@@ -27,6 +43,9 @@ export default async function CategoriesPage({ params }: { params: Promise<{ loc
             </Link>
           );
         })}
+      </div>
+      <div className="mt-8">
+        <AdSlot slot="categories-bottom" className="min-h-[90px]" />
       </div>
     </div>
   );
