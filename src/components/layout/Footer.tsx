@@ -17,6 +17,7 @@ export function Footer({ locale }: { locale: string }) {
               <li><Link href={`/${locale}`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.home')}</Link></li>
               <li><Link href={`/${locale}/categories`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.categories')}</Link></li>
               <li><Link href={`/${locale}/blog`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.blog')}</Link></li>
+              <li><Link href={`/${locale}/about`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.about')}</Link></li>
             </ul>
           </div>
           <div>
@@ -32,6 +33,9 @@ export function Footer({ locale }: { locale: string }) {
             <h3 className="text-sm font-bold text-slate-900 mb-3">Credits</h3>
             <p className="text-xs text-slate-500">{t(loc, 'footer.twemoji')}</p>
             <p className="text-xs text-slate-500 mt-1">{t(loc, 'footer.disclaimer')}</p>
+            <p className="text-xs text-slate-500 mt-1">
+              <a href="https://github.com/yam4111887-gif/emoji-dict" className="hover:text-amber-600" rel="noopener noreferrer">GitHub</a>
+            </p>
           </div>
         </div>
         <div className="mt-6 border-t border-slate-200 pt-4 text-center">

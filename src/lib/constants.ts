@@ -11,6 +11,7 @@ export const navLinks = [
   { href: '/', labelKey: 'nav.home' },
   { href: '/categories', labelKey: 'nav.categories' },
   { href: '/blog', labelKey: 'nav.blog' },
+  { href: '/about', labelKey: 'nav.about' },
 ] as const;
 
 export const footerLinks = {
@@ -18,6 +19,7 @@ export const footerLinks = {
     { href: '/', labelKey: 'nav.home' },
     { href: '/categories', labelKey: 'nav.categories' },
     { href: '/blog', labelKey: 'nav.blog' },
+    { href: '/about', labelKey: 'nav.about' },
   ],
   legal: [
     { href: '/privacy', labelKey: 'nav.privacy' },

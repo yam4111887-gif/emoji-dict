@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pages.push({ url: `${base}/${locale}`, lastModified: new Date(), changeFrequency: 'weekly', priority: locale === 'en' ? 1.0 : 0.9 });
     pages.push({ url: `${base}/${locale}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 });
     pages.push({ url: `${base}/${locale}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 });
+    pages.push({ url: `${base}/${locale}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 });
 
     for (const e of emojis) {
       pages.push({ url: `${base}/${locale}/emoji/${emojiSlug(e.name)}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 });
