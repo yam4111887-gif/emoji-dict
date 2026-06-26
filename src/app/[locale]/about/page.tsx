@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   }
   languages['x-default'] = `${SITE_URL}/en/about`;
   return {
-    title: 'About EmojiDict',
-    description: 'Learn about EmojiDict — the free online emoji dictionary with meanings, definitions, and usage for 600+ emojis.',
+    title: `${t(loc, 'about.title')} | EmojiDict`,
+    description: t(loc, 'about.description'),
     alternates: { canonical: `${SITE_URL}/${loc}/about`, languages },
   };
 }
@@ -23,7 +23,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const loc: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : 'en';
 
   const stats = [
-    { value: '600+', labelKey: 'home.stats_emojis' as const },
+    { value: '2,000+', labelKey: 'home.stats_emojis' as const },
     { value: '8', labelKey: 'home.stats_categories' as const },
     { value: '30', labelKey: 'home.stats_locales' as const },
   ];
@@ -32,7 +32,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
     <div className="max-w-3xl mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <Smile className="w-12 h-12 text-amber-500 mx-auto mb-4" />
-        <h1 className="text-3xl font-bold text-slate-900 mb-2">About EmojiDict</h1>
+        <h1 className="text-3xl font-bold text-slate-900 mb-2">{t(loc, 'about.title')}</h1>
         <p className="text-slate-600">{t(loc, 'site.description')}</p>
       </div>
 
@@ -48,7 +48,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       {/* Mission */}
       <section className="mb-8">
-        <h2 className="text-xl font-bold text-slate-900 mb-3">Our Mission</h2>
+        <h2 className="text-xl font-bold text-slate-900 mb-3">{t(loc, 'about.mission')}</h2>
         <p className="text-slate-600 leading-relaxed mb-2">
           EmojiDict was created to be the most accessible and comprehensive emoji dictionary on the web. We believe that emoji — as the fastest-growing visual language in human history — deserve clear, well-organized explanations that anyone can understand.
         </p>
@@ -59,7 +59,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       {/* Data Sources */}
       <section className="mb-8">
-        <h2 className="text-xl font-bold text-slate-900 mb-3">Our Data Sources</h2>
+        <h2 className="text-xl font-bold text-slate-900 mb-3">{t(loc, 'about.data_title')}</h2>
         <ul className="text-slate-600 leading-relaxed space-y-2">
           <li><strong>Twemoji</strong> — All emoji images are from Twitter/X Twemoji, an open-source emoji set released under the <a href="https://github.com/twitter/twemoji/blob/master/LICENSE" className="text-amber-600 hover:underline" rel="noopener noreferrer">MIT License</a>. This ensures consistent, high-quality emoji rendering across all devices.</li>
           <li><strong>Unicode CLDR</strong> — Emoji names and short descriptions are based on data from the Unicode Common Locale Data Repository, the international standard for locale data.</li>
@@ -81,7 +81,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
       {/* Contact */}
       <section className="mb-8">
-        <h2 className="text-xl font-bold text-slate-900 mb-3">Contact</h2>
+        <h2 className="text-xl font-bold text-slate-900 mb-3">{t(loc, 'about.contact_title')}</h2>
         <p className="text-slate-600 leading-relaxed">
           For questions, feedback, bug reports, or suggestions, please open an issue on our{' '}
           <a href="https://github.com/yam4111887-gif/emoji-dict" className="text-amber-600 hover:underline" rel="noopener noreferrer">GitHub repository</a>.
@@ -102,7 +102,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </div>
           <div>
             <h3 className="font-bold text-slate-800">How many emojis are there?</h3>
-            <p className="text-slate-600">Unicode has defined over 3,600 emojis. EmojiDict currently covers 600+ of the most commonly used ones, with more being added regularly.</p>
+            <p className="text-slate-600">Unicode has defined over 3,600 emojis. EmojiDict currently covers 2,000+ of the most commonly used ones, with more being added regularly.</p>
           </div>
           <div>
             <h3 className="font-bold text-slate-800">Can I use these emoji meanings on my own site?</h3>

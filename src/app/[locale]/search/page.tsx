@@ -22,7 +22,7 @@ function SearchResults() {
         <input type="text" value={q} onChange={e => setQ(e.target.value)} placeholder={t(loc, 'common.search_placeholder')} autoFocus aria-label={t(loc, 'common.search')} className="w-full max-w-md rounded-lg border border-slate-200 px-4 py-2 pl-10" />
         <Search size={18} className="absolute left-3 top-2.5 text-slate-400" />
       </div>
-      <p className="text-sm text-slate-500 mb-4">{results.length} {t(loc, 'common.no_results').includes('No') ? 'results' : '結果'}</p>
+      <p className="text-sm text-slate-500 mb-4">{results.length} {t(loc, 'search.results')}</p>
       {results.length === 0 && q && (
         <p className="text-slate-500">{t(loc, 'common.no_results')}</p>
       )}
