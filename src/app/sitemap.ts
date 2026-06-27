@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     pages.push({ url: `${base}/${locale}/categories`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 });
     pages.push({ url: `${base}/${locale}/blog`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 });
     pages.push({ url: `${base}/${locale}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 });
+    pages.push({ url: `${base}/${locale}/quiz`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 });
 
     for (const e of emojis) {
       pages.push({ url: `${base}/${locale}/emoji/${emojiSlug(e.name)}`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 });

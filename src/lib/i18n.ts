@@ -86,6 +86,8 @@ type TranslationKeys = {
   'about.contact_text': string;
   'search.results': string;
   'search.search_emojis': string;
+  'quiz.title': string;
+  'quiz.description': string;
 };
 
 const translations: Record<Locale, TranslationKeys> = {
@@ -136,6 +138,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'For questions, feedback, or suggestions, please reach out via our GitHub repository.',
     'search.results': 'results',
     'search.search_emojis': 'Search Emojis',
+    'quiz.title': 'Emoji Quiz',
+    'quiz.description': 'Test your emoji knowledge with our fun interactive quiz!',
   },
   'zh-TW': {
     'site.title': 'EmojiDict 表情符號辭典',
@@ -184,6 +188,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': '如有問題、回饋或建議，請透過我們的 GitHub 儲存庫聯繫我們。',
     'search.results': '結果',
     'search.search_emojis': '搜尋表情符號',
+    'quiz.title': '表情符號測驗',
+    'quiz.description': '用有趣的互動測驗測試你的表情符號知識！',
   },
   es: {
     'site.title': 'EmojiDict Diccionario de Emojis',
@@ -232,6 +238,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Para preguntas, comentarios o sugerencias, contáctanos a través de nuestro repositorio de GitHub.',
     'search.results': 'resultados',
     'search.search_emojis': 'Buscar Emojis',
+    'quiz.title': 'Quiz de Emojis',
+    'quiz.description': 'Pon a prueba tu conocimiento de emojis con nuestro divertido quiz interactivo!',
   },
   ja: {
     'site.title': 'EmojiDict 絵文字辞典',
@@ -280,6 +288,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'ご質問、フィードバック、ご提案は、GitHub リポジトリまでお願いします。',
     'search.results': '件',
     'search.search_emojis': '絵文字を検索',
+    'quiz.title': '絵文字クイズ',
+    'quiz.description': '楽しいインタラクティブなクイズで絵文字の知識をテストしよう！',
   },
   de: {
     'site.title': 'EmojiDict Emoji-Wörterbuch',
@@ -328,6 +338,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Bei Fragen, Feedback oder Vorschlägen wenden Sie sich bitte an unser GitHub-Repository.',
     'search.results': 'Ergebnisse',
     'search.search_emojis': 'Emojis suchen',
+    'quiz.title': 'Emoji-Quiz',
+    'quiz.description': 'Teste dein Emoji-Wissen mit unserem lustigen interaktiven Quiz!',
   },
   fr: {
     'site.title': "EmojiDict Dictionnaire d'Emojis",
@@ -376,6 +388,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Pour toute question, commentaire ou suggestion, veuillez nous contacter via notre dépôt GitHub.',
     'search.results': 'résultats',
     'search.search_emojis': 'Rechercher des Emojis',
+    'quiz.title': 'Quiz d\'Emojis',
+    'quiz.description': 'Testez vos connaissances en emojis avec notre quiz interactif!',
   },
   pt: {
     'site.title': 'EmojiDict Dicionário de Emojis',
@@ -424,6 +438,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Para perguntas, comentários ou sugestões, entre em contato através do nosso repositório no GitHub.',
     'search.results': 'resultados',
     'search.search_emojis': 'Pesquisar Emojis',
+    'quiz.title': 'Quiz de Emojis',
+    'quiz.description': 'Teste seus conhecimentos de emojis com nosso quiz interativo!',
   },
   ko: {
     'site.title': 'EmojiDict 이모지 사전',
@@ -472,6 +488,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': '질문, 피드백 또는 제안 사항이 있으시면 GitHub 저장지를 통해 연락해 주세요.',
     'search.results': '결과',
     'search.search_emojis': '이모지 검색',
+    'quiz.title': '이모지 퀴즈',
+    'quiz.description': '재미있는 대화형 퀴즈로 이모지 지식을 테스트해 보세요!',
   },
   it: {
     'site.title': 'EmojiDict Dizionario di Emoji',
@@ -520,6 +538,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Per domande, feedback o suggerimenti, contattaci tramite il nostro repository GitHub.',
     'search.results': 'risultati',
     'search.search_emojis': 'Cerca Emoji',
+    'quiz.title': 'Quiz delle Emoji',
+    'quiz.description': 'Metti alla prova la tua conoscenza delle emoji con il nostro quiz!',
   },
   hi: {
     'site.title': 'EmojiDict इमोजी शब्दकोश',
@@ -568,6 +588,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'प्रश्नों, प्रतिक्रिया या सुझावों के लिए, कृपया हमारे GitHub रिपॉजिटरी के माध्यम से संपर्क करें।',
     'search.results': 'परिणाम',
     'search.search_emojis': 'इमोजी खोजें',
+    'quiz.title': 'इमोजी क्विज़',
+    'quiz.description': 'हमारे मज़ेदार इंटरैक्टिव क्विज़ के साथ अपना इमोजी ज्ञान टेस्ट करें!',
   },
   ar: {
     'site.title': 'EmojiDict قاموس الإيموجي',
@@ -616,6 +638,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'للأسئلة أو الملاحظات أو الاقتراحات، يرجى التواصل معنا عبر مستودع GitHub الخاص بنا.',
     'search.results': 'نتائج',
     'search.search_emojis': 'البحث عن الرموز التعبيرية',
+    'quiz.title': 'اختبار الإيموجي',
+    'quiz.description': 'اختبر معرفتك بالإيموجي مع اختبارنا التفاعلي الممتع!',
   },
   ru: {
     'site.title': 'EmojiDict Словарь эмодзи',
@@ -664,6 +688,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'С вопросами, отзывами или предложениями обращайтесь через наш репозиторий на GitHub.',
     'search.results': 'результатов',
     'search.search_emojis': 'Поиск эмодзи',
+    'quiz.title': 'Викторина с эмодзи',
+    'quiz.description': 'Проверьте свои знания эмодзи с нашим интерактивным тестом!',
   },
   th: {
     'site.title': 'EmojiDict พจนานุกรมอิโมจิ',
@@ -712,6 +738,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'สำหรับคำถาม ความคิดเห็น หรือข้อเสนอแนะ โปรดติดต่อผ่านที่เก็บ GitHub ของเรา',
     'search.results': 'ผลลัพธ์',
     'search.search_emojis': 'ค้นหาอิโมจิ',
+    'quiz.title': 'แบบทดสอบอิโมจิ',
+    'quiz.description': 'ทดสอบความรู้อิโมจิของคุณกับแบบทดสอบที่สนุกของเรา!',
   },
   vi: {
     'site.title': 'EmojiDict Từ điển Emoji',
@@ -760,6 +788,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Nếu có câu hỏi, phản hồi hoặc đề xuất, vui lòng liên hệ qua kho lưu trữ GitHub của chúng tôi.',
     'search.results': 'kết quả',
     'search.search_emojis': 'Tìm kiếm Emoji',
+    'quiz.title': 'Trắc nghiệm Emoji',
+    'quiz.description': 'Kiểm tra kiến thức emoji với bài trắc nghiệm tương tác vui nhộn!',
   },
   id: {
     'site.title': 'EmojiDict Kamus Emoji',
@@ -808,6 +838,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Untuk pertanyaan, umpan balik, atau saran, silakan hubungi kami melalui repositori GitHub kami.',
     'search.results': 'hasil',
     'search.search_emojis': 'Cari Emoji',
+    'quiz.title': 'Kuis Emoji',
+    'quiz.description': 'Uji pengetahuan emoji Anda dengan kuis interaktif yang menyenangkan!',
   },
   tr: {
     'site.title': 'EmojiDict Emoji Sözlüğü',
@@ -856,6 +888,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Sorular, geri bildirim veya öneriler için lütfen GitHub depomuz üzerinden bizimle iletişime geçin.',
     'search.results': 'sonuç',
     'search.search_emojis': 'Emojileri Ara',
+    'quiz.title': 'Emoji Quiz',
+    'quiz.description': 'Eglenceli interaktif quizimizle emoji bilginizi test edin!',
   },
   pl: {
     'site.title': 'EmojiDict Słownik Emoji',
@@ -904,6 +938,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'W sprawie pytań, opinii lub sugestii prosimy o kontakt za pomocą naszego repozytorium GitHub.',
     'search.results': 'wyników',
     'search.search_emojis': 'Szukaj Emoji',
+    'quiz.title': 'Quiz Emoji',
+    'quiz.description': 'Przetestuj swoja wiedze o emoji z naszym zabawnym interaktywnym quizem!',
   },
   nl: {
     'site.title': 'EmojiDict Emoji-woordenboek',
@@ -952,6 +988,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Voor vragen, feedback of suggesties kunt u contact met ons opnemen via onze GitHub-repository.',
     'search.results': 'resultaten',
     'search.search_emojis': 'Emoji\'s zoeken',
+    'quiz.title': 'Emoji Quiz',
+    'quiz.description': 'Test je emoji-kennis met onze leuke interactieve quiz!',
   },
   sv: {
     'site.title': 'EmojiDict Emoji-ordbok',
@@ -1000,6 +1038,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'För frågor, feedback eller förslag, kontakta oss via vårt GitHub-arkiv.',
     'search.results': 'resultat',
     'search.search_emojis': 'Sök Emojis',
+    'quiz.title': 'Emoji-quiz',
+    'quiz.description': 'Testa dina emoji-kunskaper med var roliga interaktiva quiz!',
   },
   cs: {
     'site.title': 'EmojiDict Slovník emoji',
@@ -1048,6 +1088,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'S dotazy, zpětnou vazbou nebo návrhy nás kontaktujte prostřednictvím našeho repozitáře GitHub.',
     'search.results': 'výsledků',
     'search.search_emojis': 'Hledat Emoji',
+    'quiz.title': 'Kviz s Emojis',
+    'quiz.description': 'Otestujte si sve znalosti emoji s nasim zabavnym interaktivnim kvizem!',
   },
   el: {
     'site.title': 'EmojiDict Λεξικό Emoji',
@@ -1096,6 +1138,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Για ερωτήσεις, σχόλια ή προτάσεις, επικοινωνήστε μαζί μας μέσω του αποθετηρίου GitHub.',
     'search.results': 'αποτελέσματα',
     'search.search_emojis': 'Αναζήτηση Emoji',
+    'quiz.title': 'Quiz Emoji',
+    'quiz.description': 'Dokimaste tis gnoseis sas gia ta emoji me to diastralastiko mas quiz!',
   },
   uk: {
     'site.title': 'EmojiDict Словник емодзі',
@@ -1144,6 +1188,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'З питаннями, відгуками чи пропозиціями звертайтеся через наш репозиторій на GitHub.',
     'search.results': 'результатів',
     'search.search_emojis': 'Пошук емодзі',
+    'quiz.title': 'Вікторина з емодзі',
+    'quiz.description': 'Перевірте свої знання про емодзі з нашим інтерактивним тестом!',
   },
   ro: {
     'site.title': 'EmojiDict Dicționar de Emoji',
@@ -1192,6 +1238,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Pentru întrebări, feedback sau sugestii, contactați-ne prin intermediul depozitului nostru GitHub.',
     'search.results': 'rezultate',
     'search.search_emojis': 'Caută Emoji',
+    'quiz.title': 'Quiz cu Emoji',
+    'quiz.description': 'Testeaza-ti cunostintele despre emoji cu quiz-ul nostru interactiv!',
   },
   hu: {
     'site.title': 'EmojiDict Emoji-szótár',
@@ -1240,6 +1288,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Kérdések, visszajelzések vagy javaslatok esetén lépjen kapcsolatba velünk GitHub tárolónkon keresztül.',
     'search.results': 'találat',
     'search.search_emojis': 'Emojik keresése',
+    'quiz.title': 'Emoji Kviz',
+    'quiz.description': 'Teszteld emoji-ismeretedet szorakoztato interaktív kvízünkkel!',
   },
   da: {
     'site.title': 'EmojiDict Emoji-ordbog',
@@ -1288,6 +1338,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'For spørgsmål, feedback eller forslag bedes du kontakte os via vores GitHub-arkiv.',
     'search.results': 'resultater',
     'search.search_emojis': 'Søg Emojier',
+    'quiz.title': 'Emoji-quiz',
+    'quiz.description': 'Test din emoji-viden med vores sjove interaktive quiz!',
   },
   no: {
     'site.title': 'EmojiDict Emoji-ordbok',
@@ -1336,6 +1388,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'For spørsmål, tilbakemeldinger eller forslag, kontakt oss via vårt GitHub-depot.',
     'search.results': 'resultater',
     'search.search_emojis': 'Søk Emojier',
+    'quiz.title': 'Emoji-quiz',
+    'quiz.description': 'Test din emoji-kunnskap med vår morsomme interaktive quiz!',
   },
   fi: {
     'site.title': 'EmojiDict Emoji-sanakirja',
@@ -1384,6 +1438,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Kysymykset, palautteet tai ehdotukset voi lähettää GitHub-tietovarastomme kautta.',
     'search.results': 'tulosta',
     'search.search_emojis': 'Hae Emojeja',
+    'quiz.title': 'Emoji-tietovisa',
+    'quiz.description': 'Testaa emoji-tietosi hauskan interaktiivisen tietovisan avulla!',
   },
   he: {
     'site.title': 'EmojiDict מילון אמוגי',
@@ -1432,6 +1488,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'לשאלות, משוב או הצעות, נא לפנות אלינו דרך מאגר ה-GitHub שלנו.',
     'search.results': 'תוצאות',
     'search.search_emojis': 'חיפוש אימוג\'ים',
+    'quiz.title': 'חידון אמוג\'י',
+    'quiz.description': 'בחן את הידע שלך באמוג\'י עם החידון האינטראקטיבי שלנו!',
   },
   ms: {
     'site.title': 'EmojiDict Kamus Emoji',
@@ -1480,6 +1538,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Untuk soalan, maklum balas atau cadangan, sila hubungi kami melalui repositori GitHub kami.',
     'search.results': 'hasil',
     'search.search_emojis': 'Cari Emoji',
+    'quiz.title': 'Kuiz Emoji',
+    'quiz.description': 'Uji pengetahuan emoji anda dengan kuiz interaktif yang menyeronokkan!',
   },
   'pt-BR': {
     'site.title': 'EmojiDict Dicionário de Emojis',
@@ -1528,6 +1588,8 @@ const translations: Record<Locale, TranslationKeys> = {
     'about.contact_text': 'Para perguntas, comentários ou sugestões, entre em contato através do nosso repositório no GitHub.',
     'search.results': 'resultados',
     'search.search_emojis': 'Pesquisar Emojis',
+    'quiz.title': 'Quiz de Emojis',
+    'quiz.description': 'Teste seus conhecimentos de emojis com nosso quiz interativo!',
   },
 };
 

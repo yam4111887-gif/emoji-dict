@@ -80,6 +80,18 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <AdSlot slot="home-middle" className="max-w-6xl mx-auto px-4 my-8 min-h-[90px]" />
 
+      {/* Quiz CTA */}
+      <section className="px-4">
+        <div className="max-w-3xl mx-auto bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-8 text-center text-white">
+          <div className="text-5xl mb-3">🎯</div>
+          <h2 className="text-2xl font-bold mb-2">Test Your Emoji Knowledge!</h2>
+          <p className="text-amber-50 mb-4">Take our fun emoji quiz and see how many you can guess correctly!</p>
+          <Link href={`/${loc}/quiz`} className="inline-block px-6 py-3 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition shadow-lg">
+            🚀 Start Quiz
+          </Link>
+        </div>
+      </section>
+
       {/* Popular emojis */}
       <section className="max-w-6xl mx-auto px-4 py-12">
         <div className="flex items-center justify-between mb-6">
