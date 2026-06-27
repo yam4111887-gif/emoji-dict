@@ -23,7 +23,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const loc: Locale = (locales as readonly string[]).includes(locale) ? (locale as Locale) : 'en';
 
   const stats = [
-    { value: '2,000+', labelKey: 'home.stats_emojis' as const },
+    { value: '1,100+', labelKey: 'home.stats_emojis' as const },
     { value: '8', labelKey: 'home.stats_categories' as const },
     { value: '30', labelKey: 'home.stats_locales' as const },
   ];
@@ -102,7 +102,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </div>
           <div>
             <h3 className="font-bold text-slate-800">How many emojis are there?</h3>
-            <p className="text-slate-600">Unicode has defined over 3,600 emojis. EmojiDict currently covers 2,000+ of the most commonly used ones, with more being added regularly.</p>
+            <p className="text-slate-600">Unicode has defined over 3,600 emojis. EmojiDict currently covers 1,100+ of the most commonly used ones, with more being added regularly.</p>
           </div>
           <div>
             <h3 className="font-bold text-slate-800">Can I use these emoji meanings on my own site?</h3>
