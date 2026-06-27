@@ -29,6 +29,7 @@ export function Navbar({ locale }: { locale: string }) {
           <Link href={`/${locale}/categories`} className="text-sm text-slate-600 hover:text-slate-900">{t(loc, 'nav.categories')}</Link>
           <Link href={`/${locale}/blog`} className="text-sm text-slate-600 hover:text-slate-900">{t(loc, 'nav.blog')}</Link>
           <Link href={`/${locale}/quiz`} className="text-sm text-slate-600 hover:text-slate-900">🎯 Quiz</Link>
+          <Link href={`/${locale}/api-docs`} className="text-sm text-slate-600 hover:text-slate-900">API</Link>
           <Link href={`/${locale}/about`} className="text-sm text-slate-600 hover:text-slate-900">{t(loc, 'nav.about')}</Link>
           <form onSubmit={search} className="relative">
             <input type="text" value={q} onChange={e => setQ(e.target.value)} placeholder={t(loc, 'common.search_placeholder')}
@@ -52,6 +53,7 @@ export function Navbar({ locale }: { locale: string }) {
           <Link href={`/${locale}/categories`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.categories')}</Link>
           <Link href={`/${locale}/blog`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.blog')}</Link>
           <Link href={`/${locale}/quiz`} className="block py-2 text-sm" onClick={() => setOpen(false)}>🎯 Quiz</Link>
+          <Link href={`/${locale}/api-docs`} className="block py-2 text-sm" onClick={() => setOpen(false)}>API</Link>
           <Link href={`/${locale}/about`} className="block py-2 text-sm" onClick={() => setOpen(false)}>{t(loc, 'nav.about')}</Link>
           <div className="py-2"><LanguageSwitcher currentLocale={loc} /></div>
         </div>
