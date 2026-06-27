@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { locales, defaultLocale, t } from '@/lib/i18n';
-import { siteConfig } from '@/lib/constants';
+import { SITE_CONFIG } from '@/lib/constants';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 
@@ -11,22 +11,22 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const loc = (locales.includes(locale as any) ? locale : defaultLocale) as typeof defaultLocale;
-  const title = `Emoji API — ${siteConfig.name}`;
+  const title = `Emoji API — ${SITE_CONFIG.name}`;
   const description = 'Free Emoji API with JSON responses. Search, filter, and access 1,300+ emojis with names, keywords, and descriptions.';
-  const canonical = `${siteConfig.url}/${loc}/api-docs/`;
+  const canonical = `${SITE_CONFIG.url}/${loc}/api-docs/`;
 
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: Object.fromEntries(locales.map(l => [l, `${siteConfig.url}/${l}/api-docs/`])),
+      languages: Object.fromEntries(locales.map(l => [l, `${SITE_CONFIG.url}/${l}/api-docs/`])),
     },
     openGraph: {
       title,
       description,
       url: canonical,
-      siteName: siteConfig.name,
+      siteName: SITE_CONFIG.name,
       type: 'website',
     },
   };

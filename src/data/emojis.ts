@@ -3,7 +3,12 @@ export interface EmojiEntry {
   codepoint: string;
   name: string;
   category: string;
-  keywords: string[  { char: '🫢', codepoint: '1fae2', name: 'Face with Open Eyes and Hand Over Mouth', category: 'Smileys & People', keywords: ['shock', 'surprise', 'gasp', 'omg'], description: 'A face with wide eyes and a hand covering the mouth. Expresses shocked surprise or gasping.' },
+  keywords: string[];
+  description: string;
+}
+
+export const emojis: EmojiEntry[] = [
+  { char: '🫢', codepoint: '1fae2', name: 'Face with Open Eyes and Hand Over Mouth', category: 'Smileys & People', keywords: ['shock', 'surprise', 'gasp', 'omg'], description: 'A face with wide eyes and a hand covering the mouth. Expresses shocked surprise or gasping.' },
   { char: '🫣', codepoint: '1fae3', name: 'Face with Peeking Eye', category: 'Smileys & People', keywords: ['peek', 'shy', 'curious', 'peeking'], description: 'A face with hands covering the eyes but peeking through. Used for shyness or curiosity.' },
   { char: '🫤', codepoint: '1fae4', name: 'Face with Diagonal Mouth', category: 'Smileys & People', keywords: ['skeptical', 'unsure', 'meh', 'diagonal'], description: 'A face with a diagonal mouth. Expresses skepticism, uncertainty, or mixed feelings.' },
   { char: '🥹', codepoint: '1f979', name: 'Face Holding Back Tears', category: 'Smileys & People', keywords: ['tears', 'emotional', 'proud', 'holding-back'], description: 'A face with eyes welling with tears but trying not to cry. Expresses being deeply moved.' },
@@ -446,49 +451,6 @@ export interface EmojiEntry {
   { char: '✡️', codepoint: '2721', name: 'Star of David', category: 'Symbols', keywords: ['star-of-david', 'judaism', 'jewish', 'star'], description: 'The Star of David.' },
   { char: '✴️', codepoint: '2734', name: 'Eight-Pointed Star', category: 'Symbols', keywords: ['star', 'eight-pointed', 'sparkle', 'shape'], description: 'An eight-pointed star.' },
   { char: '❇️', codepoint: '2747', name: 'Sparkle', category: 'Symbols', keywords: ['sparkle', 'green', 'shiny', 'decoration'], description: 'A green sparkle.' },
-];
-  description: string;
-}
-
-export const categories = [
-  'Smileys & People',
-  'Animals & Nature',
-  'Food & Drink',
-  'Activities',
-  'Travel & Places',
-  'Objects',
-  'Symbols',
-  'Flags',
-] as const;
-
-export type Category = (typeof categories)[number];
-
-export const categorySlugs: Record<string, string> = {
-  'Smileys & People': 'smileys-people',
-  'Animals & Nature': 'animals-nature',
-  'Food & Drink': 'food-drink',
-  'Activities': 'activities',
-  'Travel & Places': 'travel-places',
-  'Objects': 'objects',
-  'Symbols': 'symbols',
-  'Flags': 'flags',
-};
-
-export const slugToCategory: Record<string, string> = Object.entries(categorySlugs).reduce(
-  (acc, [cat, slug]) => ({ ...acc, [slug]: cat }),
-  {} as Record<string, string>
-);
-
-export function twemojiUrl(codepoint: string): string {
-  return `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/${codepoint}.svg`;
-}
-
-export function emojiSlug(name: string): string {
-  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-}
-
-export const emojis: EmojiEntry[] = [
-  // ============ SMILEYS & PEOPLE (100+) ============
   { char: '😀', codepoint: '1f600', name: 'Grinning Face', category: 'Smileys & People', keywords: ['happy', 'smile', 'joy', 'cheerful'], description: 'A classic yellow face with a wide, happy smile. Used to express general happiness, friendliness, or a positive greeting.' },
   { char: '😃', codepoint: '1f603', name: 'Grinning Face with Big Eyes', category: 'Smileys & People', keywords: ['happy', 'joy', 'excited', 'delighted'], description: 'A cheerful face with open grin and wide eyes. Conveys enthusiasm, delight, or genuine joy.' },
   { char: '😄', codepoint: '1f604', name: 'Grinning Face with Smiling Eyes', category: 'Smileys & People', keywords: ['happy', 'joyful', 'cheerful', 'grin'], description: 'A beaming face with squinted, smiling eyes. Expresses heartfelt happiness and warm positivity.' },
@@ -610,8 +572,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🙇', codepoint: '1f647', name: 'Person Bowing', category: 'Smileys & People', keywords: ['bow', 'apologize', 'respect', 'sorry'], description: 'A person bowing deeply at the waist. Used in Japanese culture for deep respect, apology, or gratitude.' },
   { char: '🤦', codepoint: '1f926', name: 'Person Facepalming', category: 'Smileys & People', keywords: ['facepalm', 'disbelief', 'fail', 'omg'], description: 'A person covering their face with one hand. The classic facepalm, expressing disbelief at a stupid mistake.' },
   { char: '🤷', codepoint: '1f937', name: 'Person Shrugging', category: 'Smileys & People', keywords: ['shrug', 'whatever', 'dont-know', 'indifferent'], description: 'A person with hands raised and shoulders lifted. Used to express not knowing, indifference, or whatever.' },
-
-  // ============ ANIMALS & NATURE (60+) ============
   { char: '🐶', codepoint: '1f436', name: 'Dog Face', category: 'Animals & Nature', keywords: ['dog', 'puppy', 'pet', 'pup'], description: 'A friendly dog face with floppy ears. Used to express love for dogs, pets, or loyalty.' },
   { char: '🐱', codepoint: '1f431', name: 'Cat Face', category: 'Animals & Nature', keywords: ['cat', 'kitten', 'pet', 'feline'], description: 'A cute cat face with whiskers and triangular ears. Used for all things feline and pet-related.' },
   { char: '🐭', codepoint: '1f42d', name: 'Mouse Face', category: 'Animals & Nature', keywords: ['mouse', 'rodent', 'small', 'cute'], description: 'A small mouse face with round ears. Used for rodents, shyness, or something small and cute.' },
@@ -699,8 +659,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🦃', codepoint: '1f983', name: 'Turkey', category: 'Animals & Nature', keywords: ['turkey', 'thanksgiving', 'bird', 'wild'], description: 'A brown turkey with fanned tail. Used for Thanksgiving, autumn, or being called a turkey.' },
   { char: '🦚', codepoint: '1f9a9', name: 'Peacock', category: 'Animals & Nature', keywords: ['peacock', 'colorful', 'feathers', 'show-off'], description: 'A blue peacock with colorful tail feathers displayed. Used for beauty, vanity, or showing off.' },
   { char: '🦜', codepoint: '1f9a2', name: 'Parrot', category: 'Animals & Nature', keywords: ['parrot', 'tropical', 'colorful', 'mimic'], description: 'A colorful parrot with red, blue, and green feathers. Used for tropical themes or repeating what others say.' },
-
-  // ============ FOOD & DRINK (60+) ============
   { char: '🍏', codepoint: '1f34f', name: 'Green Apple', category: 'Food & Drink', keywords: ['apple', 'green', 'fruit', 'sour'], description: 'A bright green apple. Used for healthy eating, fruit, or teachers and school.' },
   { char: '🍎', codepoint: '1f34e', name: 'Red Apple', category: 'Food & Drink', keywords: ['apple', 'red', 'fruit', 'healthy'], description: 'A classic red apple. Used for healthy food, teachers, or the forbidden fruit.' },
   { char: '🍐', codepoint: '1f350', name: 'Pear', category: 'Food & Drink', keywords: ['pear', 'fruit', 'green', 'sweet'], description: 'A yellow-green pear shape. Used for fruit, healthy snacking, or describing a body shape.' },
@@ -777,8 +735,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🍷', codepoint: '1f377', name: 'Wine Glass', category: 'Food & Drink', keywords: ['wine', 'red', 'glass', 'drink'], description: 'A glass of red wine. Used for fine dining, relaxation, or wine culture.' },
   { char: '🥃', codepoint: '1f943', name: 'Tumbler Glass', category: 'Food & Drink', keywords: ['whiskey', 'scotch', 'glass', 'drink'], description: 'A thick tumbler glass with amber liquor, typically whiskey. Used for spirits, bars, or relaxing.' },
   { char: '🍸', codepoint: '1f378', name: 'Cocktail Glass', category: 'Food & Drink', keywords: ['martini', 'cocktail', 'glass', 'drink'], description: 'A martini glass with olive garnish. Used for cocktails, parties, or a sophisticated night out.' },
-
-  // ============ ACTIVITIES (40+) ============
   { char: '⚽', codepoint: '26bd', name: 'Soccer Ball', category: 'Activities', keywords: ['soccer', 'football', 'ball', 'sport'], description: 'A classic black and white soccer ball. Used for the world\'s most popular sport, football matches, or teamwork.' },
   { char: '🏀', codepoint: '1f3c0', name: 'Basketball', category: 'Activities', keywords: ['basketball', 'ball', 'sport', 'court'], description: 'An orange basketball with black lines. Used for the sport, March Madness, or shooting hoops.' },
   { char: '🏈', codepoint: '1f3c8', name: 'American Football', category: 'Activities', keywords: ['football', 'nfl', 'ball', 'sport'], description: 'A brown American football with white laces. Used for gridiron football, the Super Bowl, or tackles.' },
@@ -838,8 +794,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🎮', codepoint: '1f3ae', name: 'Video Game', category: 'Activities', keywords: ['game', 'controller', 'gaming', 'play'], description: 'A video game controller. Used for gaming, esports, or play time.' },
   { char: '🎰', codepoint: '1f3b0', name: 'Slot Machine', category: 'Activities', keywords: ['slot', 'casino', 'gamble', 'jackpot'], description: 'A casino slot machine. Used for gambling, Las Vegas, or taking a chance on luck.' },
   { char: '🧩', codepoint: '1f9e9', name: 'Puzzle Piece', category: 'Activities', keywords: ['puzzle', 'jigsaw', 'piece', 'solve'], description: 'A single green jigsaw puzzle piece. Used for puzzles, solving problems, or how things fit together.' },
-
-  // ============ TRAVEL & PLACES (50+) ============
   { char: '🚗', codepoint: '1f697', name: 'Car', category: 'Travel & Places', keywords: ['car', 'drive', 'road', 'vehicle'], description: 'A red passenger car, viewed from the side. Used for driving, road trips, or commuting.' },
   { char: '🚕', codepoint: '1f695', name: 'Taxi', category: 'Travel & Places', keywords: ['taxi', 'cab', 'ride', 'city'], description: 'A yellow taxi cab. Used for getting rides, city life, or hailing a cab.' },
   { char: '🚙', codepoint: '1f699', name: 'Sport Utility Vehicle', category: 'Travel & Places', keywords: ['suv', 'car', 'vehicle', 'drive'], description: 'A blue sport utility vehicle. Used for family cars, road trips, or off-road adventures.' },
@@ -900,8 +854,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🌇', codepoint: '1f307', name: 'Sunset', category: 'Travel & Places', keywords: ['sunset', 'city', 'evening', 'skyline'], description: 'A sunset over a city skyline. Used for endings, beautiful evenings, or city life.' },
   { char: '🌉', codepoint: '1f309', name: 'Bridge at Night', category: 'Travel & Places', keywords: ['bridge', 'night', 'city', 'illuminated'], description: 'A bridge illuminated at night. Used for cityscapes, travel, or scenic views.' },
   { char: '🌌', codepoint: '1f30c', name: 'Milky Way', category: 'Travel & Places', keywords: ['galaxy', 'stars', 'space', 'night'], description: 'The Milky Way galaxy in the night sky. Used for astronomy, stargazing, or cosmic beauty.' },
-
-  // ============ OBJECTS (60+) ============
   { char: '⌚', codepoint: '231a', name: 'Watch', category: 'Objects', keywords: ['watch', 'time', 'wrist', 'clock'], description: 'A wristwatch with a round face. Used for time, punctuality, or checking the hour.' },
   { char: '📱', codepoint: '1f4f1', name: 'Mobile Phone', category: 'Objects', keywords: ['phone', 'mobile', 'cell', 'device'], description: 'A modern smartphone. Used for calling, texting, apps, or being on your phone.' },
   { char: '💻', codepoint: '1f4bb', name: 'Laptop', category: 'Objects', keywords: ['laptop', 'computer', 'work', 'device'], description: 'An open laptop computer. Used for work, coding, remote learning, or technology.' },
@@ -974,8 +926,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🔨', codepoint: '1f528', name: 'Hammer', category: 'Objects', keywords: ['hammer', 'tool', 'build', 'nail'], description: 'A claw hammer. Used for construction, building, or hammering a point home.' },
   { char: '🪓', codepoint: '1fa93', name: 'Axe', category: 'Objects', keywords: ['axe', 'tool', 'chop', 'wood'], description: 'A sharp axe. Used for chopping wood, lumberjacks, or sharp decisions.' },
   { char: '🛠️', codepoint: '1f6f0', name: 'Hammer and Wrench', category: 'Objects', keywords: ['tools', 'hammer', 'wrench', 'fix'], description: 'A hammer and wrench crossed. Used for construction, repair, DIY projects, or fixing things.' },
-
-  // ============ SYMBOLS (60+) ============
   { char: '❤️', codepoint: '2764', name: 'Red Heart', category: 'Symbols', keywords: ['heart', 'love', 'red', 'romance'], description: 'A classic red heart. The most universal symbol for love, affection, and caring.' },
   { char: '🧡', codepoint: '1f9e1', name: 'Orange Heart', category: 'Symbols', keywords: ['heart', 'orange', 'warmth', 'care'], description: 'An orange heart. Used for warmth, care, or fall-themed love and friendship.' },
   { char: '💛', codepoint: '1f49b', name: 'Yellow Heart', category: 'Symbols', keywords: ['heart', 'yellow', 'friendship', 'joy'], description: 'A yellow heart. Used for friendship, happiness, or platonic love.' },
@@ -1038,8 +988,6 @@ export const emojis: EmojiEntry[] = [
   { char: '❕', codepoint: '2755', name: 'White Exclamation Mark', category: 'Symbols', keywords: ['exclamation', 'alert', 'attention', 'warning'], description: 'A white exclamation mark. Used for emphasis, alerts, or important notices.' },
   { char: '⚠️', codepoint: '26a0', name: 'Warning', category: 'Symbols', keywords: ['warning', 'caution', 'alert', 'danger'], description: 'A yellow triangle with an exclamation mark. Used for warnings, caution, or hazardous conditions.' },
   { char: '🚫', codepoint: '1f6ab', name: 'Prohibited', category: 'Symbols', keywords: ['prohibited', 'no', 'forbidden', 'banned'], description: 'A red circle with a diagonal line. Used for prohibition, forbidding something, or no entry.' },
-
-  // ============ FLAGS (70+) ============
   { char: '🏳️', codepoint: '1f3f3', name: 'White Flag', category: 'Flags', keywords: ['flag', 'white', 'surrender', 'peace'], description: 'A plain white flag. Used for surrender, peace, or a blank flag placeholder.' },
   { char: '🏴', codepoint: '1f3f4', name: 'Black Flag', category: 'Flags', keywords: ['flag', 'black', 'pirate', 'protest'], description: 'A plain black flag. Used for pirates, protests, or ominous signals.' },
   { char: '🏁', codepoint: '1f3c1', name: 'Chequered Flag', category: 'Flags', keywords: ['flag', 'checkered', 'finish', 'racing'], description: 'A black and white checkered flag. Used for racing finishes, completion, or success.' },
@@ -1408,30 +1356,42 @@ export const emojis: EmojiEntry[] = [
   { char: '🇿🇼', codepoint: '1f1ff-1f1fc', name: 'Flag: Zimbabwe', category: 'Flags', keywords: ["zimbabwe","flag","country","africa"], description: 'The flag of Zimbabwe.' },
 ];
 
-// Helper functions
-export function getEmojisByCategory(category: string): EmojiEntry[] {
-  return emojis.filter(e => e.category === category);
+export const categories = [
+  'Smileys & People',
+  'Animals & Nature',
+  'Food & Drink',
+  'Activities',
+  'Travel & Places',
+  'Objects',
+  'Symbols',
+  'Flags',
+];
+
+export const categorySlugs: Record<string, string> = {
+  'Smileys & People': 'smileys-people',
+  'Animals & Nature': 'animals-nature',
+  'Food & Drink': 'food-drink',
+  'Activities': 'activities',
+  'Travel & Places': 'travel-places',
+  'Objects': 'objects',
+  'Symbols': 'symbols',
+  'Flags': 'flags',
+};
+
+export const slugToCategory: Record<string, string> = Object.fromEntries(
+  Object.entries(categorySlugs).map(([cat, slug]) => [slug, cat])
+);
+
+export function twemojiUrl(codepoint: string): string {
+  return `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/${codepoint}.png`;
+}
+
+export function emojiSlug(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
 export function getEmojiBySlug(slug: string): EmojiEntry | undefined {
   return emojis.find(e => emojiSlug(e.name) === slug);
-}
-
-export function getRelatedEmojis(emoji: EmojiEntry, count: number = 8): EmojiEntry[] {
-  return emojis
-    .filter(e => e.category === emoji.category && e.char !== emoji.char)
-    .slice(0, count);
-}
-
-export function searchEmojis(query: string): EmojiEntry[] {
-  const q = query.toLowerCase().trim();
-  if (!q) return [];
-  return emojis.filter(e =>
-    e.name.toLowerCase().includes(q) ||
-    e.keywords.some(k => k.includes(q)) ||
-    e.category.toLowerCase().includes(q) ||
-    e.char.includes(q)
-  );
 }
 
 export function getCategoryCount(category: string): number {

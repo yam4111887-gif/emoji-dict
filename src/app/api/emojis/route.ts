@@ -37,6 +37,6 @@ export async function GET(request: NextRequest) {
     count: paginated.length,
     offset,
     limit,
-    data: pagated,
+    data: paginated,
   });
 }
