@@ -657,7 +657,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🐈‍⬛', codepoint: '1f408-200d-2b1b', name: 'Black Cat', category: 'Animals & Nature', keywords: ['black-cat', 'halloween', 'bad-luck', 'mysterious'], description: 'A solid black cat. Used for Halloween, superstition, or gothic aesthetics.' },
   { char: '🐓', codepoint: '1f413', name: 'Rooster', category: 'Animals & Nature', keywords: ['rooster', 'chicken', 'morning', 'farm'], description: 'A colorful rooster with a red comb. Used for farm life, mornings, or the Chinese zodiac.' },
   { char: '🦃', codepoint: '1f983', name: 'Turkey', category: 'Animals & Nature', keywords: ['turkey', 'thanksgiving', 'bird', 'wild'], description: 'A brown turkey with fanned tail. Used for Thanksgiving, autumn, or being called a turkey.' },
-  { char: '🦚', codepoint: '1f99a', name: 'Peacock', category: 'Animals & Nature', keywords: ['peacock', 'colorful', 'feathers', 'show-off'], description: 'A blue peacock with colorful tail feathers displayed. Used for beauty, vanity, or showing off.' },
   { char: '🦜', codepoint: '1f99c', name: 'Parrot', category: 'Animals & Nature', keywords: ['parrot', 'tropical', 'colorful', 'mimic'], description: 'A colorful parrot with red, blue, and green feathers. Used for tropical themes or repeating what others say.' },
   { char: '🍏', codepoint: '1f34f', name: 'Green Apple', category: 'Food & Drink', keywords: ['apple', 'green', 'fruit', 'sour'], description: 'A bright green apple. Used for healthy eating, fruit, or teachers and school.' },
   { char: '🍎', codepoint: '1f34e', name: 'Red Apple', category: 'Food & Drink', keywords: ['apple', 'red', 'fruit', 'healthy'], description: 'A classic red apple. Used for healthy food, teachers, or the forbidden fruit.' },
@@ -683,7 +682,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🥬', codepoint: '1f96c', name: 'Leafy Green', category: 'Food & Drink', keywords: ['lettuce', 'salad', 'green', 'vegetable'], description: 'A head of green lettuce or bok choy. Used for salads, healthy eating, or leafy greens.' },
   { char: '🥒', codepoint: '1f952', name: 'Cucumber', category: 'Food & Drink', keywords: ['cucumber', 'green', 'vegetable', 'fresh'], description: 'A long green cucumber. Used for fresh eating, salads, or skincare metaphors.' },
   { char: '🌶️', codepoint: '1f336', name: 'Hot Pepper', category: 'Food & Drink', keywords: ['pepper', 'spicy', 'hot', 'chili'], description: 'A red chili pepper with a green stem. Used for spicy food, heat, or adding intensity.' },
-  { char: '🫑', codepoint: '1fad1', name: 'Bell Pepper', category: 'Food & Drink', keywords: ['bell-pepper', 'pepper', 'vegetable', 'sweet'], description: 'A green bell pepper. Used for cooking, sweet peppers, or healthy eating.' },
   { char: '🌽', codepoint: '1f33d', name: 'Ear of Corn', category: 'Food & Drink', keywords: ['corn', 'maize', 'yellow', 'vegetable'], description: 'A yellow ear of corn with green husk. Used for agriculture, BBQ grilling, or corny jokes.' },
   { char: '🥕', codepoint: '1f955', name: 'Carrot', category: 'Food & Drink', keywords: ['carrot', 'orange', 'vegetable', 'rabbit'], description: 'An orange carrot with green top. Used for healthy eating, rabbits, or incentives.' },
   { char: '🧄', codepoint: '1f9c4', name: 'Garlic', category: 'Food & Drink', keywords: ['garlic', 'bulb', 'cooking', 'pungent'], description: 'A white garlic bulb. Used for cooking, flavor, or warding off vampires.' },
@@ -909,8 +907,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🧾', codepoint: '1f9fe', name: 'Receipt', category: 'Objects', keywords: ['receipt', 'paper', 'transaction', 'proof'], description: 'A white thermal receipt. Used for purchases, expense tracking, or proof of payment.' },
   { char: '✏️', codepoint: '270f', name: 'Pencil', category: 'Objects', keywords: ['pencil', 'write', 'draw', 'school'], description: 'A yellow pencil with an eraser. Used for writing, drawing, or school supplies.' },
   { char: '✒️', codepoint: '2712', name: 'Black Nib', category: 'Objects', keywords: ['nib', 'pen', 'write', 'ink'], description: 'A fountain pen nib. Used for elegant writing, signing documents, or calligraphy.' },
-  { char: '🖋️', codepoint: '1f58b', name: 'Fountain Pen', category: 'Objects', keywords: ['fountain-pen', 'write', 'ink', 'elegant'], description: 'A fountain pen. Used for signing important documents, calligraphy, or elegant writing.' },
-  { char: '🖊️', codepoint: '1f58a', name: 'Pen', category: 'Objects', keywords: ['pen', 'write', 'ballpoint', 'ink'], description: 'A ballpoint pen. Used for writing, signing, or everyday office supplies.' },
   { char: '🖌️', codepoint: '1f58c', name: 'Paintbrush', category: 'Objects', keywords: ['paintbrush', 'paint', 'art', 'create'], description: 'An artist\'s paintbrush. Used for painting, art projects, or creative work.' },
   { char: '🖍️', codepoint: '1f58d', name: 'Crayon', category: 'Objects', keywords: ['crayon', 'color', 'draw', 'kids'], description: 'A colorful crayon. Used for children\'s art, coloring, or nostalgia for childhood creativity.' },
   { char: '📌', codepoint: '1f4cc', name: 'Pushpin', category: 'Objects', keywords: ['pushpin', 'pin', 'mark', 'location'], description: 'A red pushpin or thumbtack. Used for marking locations on maps, pinning notes, or highlights.' },
@@ -925,7 +921,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🗝️', codepoint: '1f5dd', name: 'Old Key', category: 'Objects', keywords: ['key', 'old', 'antique', 'skeleton'], description: 'An ornate old key. Used for antiques, secrets, or unlocking something ancient.' },
   { char: '🔨', codepoint: '1f528', name: 'Hammer', category: 'Objects', keywords: ['hammer', 'tool', 'build', 'nail'], description: 'A claw hammer. Used for construction, building, or hammering a point home.' },
   { char: '🪓', codepoint: '1fa93', name: 'Axe', category: 'Objects', keywords: ['axe', 'tool', 'chop', 'wood'], description: 'A sharp axe. Used for chopping wood, lumberjacks, or sharp decisions.' },
-  { char: '🛠️', codepoint: '1f6e0', name: 'Hammer and Wrench', category: 'Objects', keywords: ['tools', 'hammer', 'wrench', 'fix'], description: 'A hammer and wrench crossed. Used for construction, repair, DIY projects, or fixing things.' },
   { char: '❤️', codepoint: '2764', name: 'Red Heart', category: 'Symbols', keywords: ['heart', 'love', 'red', 'romance'], description: 'A classic red heart. The most universal symbol for love, affection, and caring.' },
   { char: '🧡', codepoint: '1f9e1', name: 'Orange Heart', category: 'Symbols', keywords: ['heart', 'orange', 'warmth', 'care'], description: 'An orange heart. Used for warmth, care, or fall-themed love and friendship.' },
   { char: '💛', codepoint: '1f49b', name: 'Yellow Heart', category: 'Symbols', keywords: ['heart', 'yellow', 'friendship', 'joy'], description: 'A yellow heart. Used for friendship, happiness, or platonic love.' },
@@ -1059,7 +1054,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🇹🇼', codepoint: '1f1f9-1f1fc', name: 'Taiwan Flag', category: 'Flags', keywords: ['taiwan', 'roc', 'flag', 'asia'], description: 'The flag of the Republic of China (Taiwan) with a red field, blue canton, and white sun.' },
   { char: '🇭🇰', codepoint: '1f1ed-1f1f0', name: 'Hong Kong Flag', category: 'Flags', keywords: ['hong-kong', 'hk', 'flag', 'asia'], description: 'The Hong Kong SAR flag with a white bauhinia flower on a red background.' },
   { char: '🇲🇴', codepoint: '1f1f2-1f1f4', name: 'Macao Flag', category: 'Flags', keywords: ['macao', 'macau', 'flag', 'asia'], description: 'The Macao SAR flag with white lotus flower, bridge, and stars on a green background.' },
-  { char: '🇶🇦', codepoint: '1f1f6-1f1e6', name: 'Qatar Flag', category: 'Flags', keywords: ['qatar', 'qatari', 'flag', 'middle-east'], description: 'The Qatari flag with maroon and white, separated by a serrated edge.' },
   { char: '🇰🇼', codepoint: '1f1f0-1f1fc', name: 'Kuwait Flag', category: 'Flags', keywords: ['kuwait', 'kuwaiti', 'flag', 'middle-east'], description: 'The Kuwaiti flag with green, white, and red horizontal stripes and a black trapezoid.' },
   { char: '🇮🇸', codepoint: '1f1ee-1f1f8', name: 'Iceland Flag', category: 'Flags', keywords: ['iceland', 'icelandic', 'flag', 'europe'], description: 'The Icelandic flag with a red cross on a white cross on a blue background.' },
   { char: '🇪🇺', codepoint: '1f1ea-1f1fa', name: 'European Union Flag', category: 'Flags', keywords: ['eu', 'european-union', 'flag', 'europe'], description: 'The EU flag with a circle of 12 gold stars on a blue background.' },
@@ -1080,15 +1074,12 @@ export const emojis: EmojiEntry[] = [
   { char: '👇', codepoint: '1f447', name: 'Backhand Index Pointing Down', category: 'Smileys & People', keywords: ["point","down","index","direction","below"], description: 'A hand pointing downward with the index finger.' },
   { char: '🖕', codepoint: '1f595', name: 'Middle Finger', category: 'Smileys & People', keywords: ["finger","rude","middle","angry"], description: 'A raised middle finger, an offensive gesture expressing anger or defiance.' },
   { char: '🤜', codepoint: '1f91c', name: 'Right-Facing Fist', category: 'Smileys & People', keywords: ["fist","bump","right","punch"], description: 'A right-facing fist, used for fist bumps or punches.' },
-  { char: '🤛', codepoint: '1f91b', name: 'Left-Facing Fist', category: 'Smileys & People', keywords: ["fist","bump","left","punch"], description: 'A left-facing fist, used for fist bumps or punches.' },
   { char: '👊', codepoint: '1f44a', name: 'Oncoming Fist', category: 'Smileys & People', keywords: ["punch","fist","fight","resolve","bump"], description: 'A clenched fist coming toward the viewer, representing a punch or determination.' },
   { char: '🐫', codepoint: '1f42b', name: 'Two-Hump Camel', category: 'Animals & Nature', keywords: ["camel","bactrian","two humps","desert"], description: 'A two-hump Bactrian camel, native to Central Asia.' },
   { char: '🦥', codepoint: '1f9a5', name: 'Sloth', category: 'Animals & Nature', keywords: ["sloth","slow","lazy","animal","cute"], description: 'A slow-moving sloth hanging from a branch, known for its leisurely pace.' },
   { char: '🦦', codepoint: '1f9a6', name: 'Otter', category: 'Animals & Nature', keywords: ["otter","river","cute","playful","water"], description: 'A playful otter floating on its back, known for holding hands.' },
   { char: '🦨', codepoint: '1f9a8', name: 'Skunk', category: 'Animals & Nature', keywords: ["skunk","smelly","stripes","animal"], description: 'A black and white skunk, known for its defensive spray.' },
   { char: '🦡', codepoint: '1f9a1', name: 'Badger', category: 'Animals & Nature', keywords: ["badger","animal","dig","stripes"], description: 'honey badger,ferocious animal known for digging.' },
-  { char: '🦜', codepoint: '1f99c', name: 'Parrot', category: 'Animals & Nature', keywords: ["parrot","colorful","talk","bird","tropical"], description: 'A colorful parrot, known for mimicking human speech.' },
-  { char: '🦚', codepoint: '1f99a', name: 'Peacock', category: 'Animals & Nature', keywords: ["peacock","colorful","feathers","bird","beautiful"], description: 'A peacock with an impressive fan of colorful tail feathers.' },
   { char: '🐣', codepoint: '1f423', name: 'Hatching Chick', category: 'Animals & Nature', keywords: ["chick","hatch","egg","birth","bird"], description: 'A baby chick emerging from its egg shell.' },
   { char: '🐥', codepoint: '1f425', name: 'Front-Facing Baby Chick', category: 'Animals & Nature', keywords: ["chick","baby","cute","front","bird"], description: 'A baby chick facing forward, looking cute.' },
   { char: '🪲', codepoint: '1fab2', name: 'Beetle', category: 'Animals & Nature', keywords: ["beetle","insect","bug","nature"], description: 'A beetle insect with a hard shell.' },
@@ -1138,7 +1129,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🍾', codepoint: '1f37e', name: 'Bottle with Popping Cork', category: 'Food & Drink', keywords: ["champagne","cork","celebration","pop","drink"], description: 'A champagne bottle with a popping cork, for celebrations.' },
   { char: '🍹', codepoint: '1f379', name: 'Tropical Drink', category: 'Food & Drink', keywords: ["cocktail","tropical","pineapple","drink","summer"], description: 'A tropical cocktail with fruit and umbrella.' },
   { char: '🥤', codepoint: '1f964', name: 'Cup with Straw', category: 'Food & Drink', keywords: ["cup","straw","drink","soda","fast food"], description: 'A cup with a straw, representing soft drinks.' },
-  { char: '🧋', codepoint: '1f9cb', name: 'Bubble Tea', category: 'Food & Drink', keywords: ["bubble tea","boba","tapioca","milk tea","drink"], description: 'Bubble tea with tapioca pearls, a popular Asian drink.' },
   { char: '🧃', codepoint: '1f9c3', name: 'Beverage Box', category: 'Food & Drink', keywords: ["juice","box","drink","straw","child"], description: 'A juice box with a straw, a children\'s drink.' },
   { char: '🧉', codepoint: '1f9c9', name: 'Mate', category: 'Food & Drink', keywords: ["mate","yerba","drink","south american","gourd"], description: 'A gourd of yerba mate, a South American drink.' },
   { char: '🧊', codepoint: '1f9ca', name: 'Ice', category: 'Food & Drink', keywords: ["ice","cube","cold","drink","water"], description: 'An ice cube, representing cold beverages.' },
@@ -1180,7 +1170,6 @@ export const emojis: EmojiEntry[] = [
   { char: '🛶', codepoint: '1f6f6', name: 'Canoe', category: 'Travel & Places', keywords: ["canoe","boat","paddle","water","river"], description: 'A canoe, for paddling on water.' },
   { char: '🚤', codepoint: '1f6a4', name: 'Speedboat', category: 'Travel & Places', keywords: ["speedboat","boat","fast","water","motor"], description: 'A fast speedboat on the water.' },
   { char: '🛥', codepoint: '1f6e5', name: 'Motor Boat', category: 'Travel & Places', keywords: ["motor boat","yacht","boat","water","luxury"], description: 'A motor boat or yacht on the water.' },
-  { char: '🛳', codepoint: '1f6f3', name: 'Passenger Ship', category: 'Travel & Places', keywords: ["ship","passenger","cruise","ferry","boat"], description: 'A large passenger or cruise ship.' },
   { char: '⛴', codepoint: '26f4', name: 'Ferry', category: 'Travel & Places', keywords: ["ferry","boat","water","transport","cross"], description: 'A ferry boat, for crossing water.' },
   { char: '⚓', codepoint: '2693', name: 'Anchor', category: 'Travel & Places', keywords: ["anchor","ship","boat","sea","stop"], description: 'A ship\'s anchor, for securing boats.' },
   { char: '⛽', codepoint: '26fd', name: 'Fuel Pump', category: 'Travel & Places', keywords: ["fuel","gas","pump","station","car"], description: 'A gas station fuel pump.' },
@@ -1202,7 +1191,6 @@ export const emojis: EmojiEntry[] = [
   { char: '📼', codepoint: '1f4fc', name: 'Videocassette', category: 'Objects', keywords: ["vhs","tape","video","cassette","old"], description: 'A VHS videocassette tape.' },
   { char: '🔍', codepoint: '1f50d', name: 'Magnifying Glass Tilted Left', category: 'Objects', keywords: ["magnify","glass","search","zoom","inspect"], description: 'A magnifying glass, for close inspection.' },
   { char: '🔎', codepoint: '1f50e', name: 'Magnifying Glass Tilted Right', category: 'Objects', keywords: ["magnify","glass","search","zoom","inspect"], description: 'A magnifying glass, for searching.' },
-  { char: '🕯', codepoint: '1f56f', name: 'Candle', category: 'Objects', keywords: ["candle","wax","light","flame","decoration"], description: 'A lit candle, for light or ambiance.' },
   { char: '🪔', codepoint: '1fa94', name: 'Diya Lamp', category: 'Objects', keywords: ["diya","lamp","oil","light","hindu"], description: 'A diya oil lamp, used in Hindu festivals.' },
   { char: '📗', codepoint: '1f4d7', name: 'Green Book', category: 'Objects', keywords: ["book","green","read","library","study"], description: 'A green book cover.' },
   { char: '📘', codepoint: '1f4d8', name: 'Blue Book', category: 'Objects', keywords: ["book","blue","read","library","study"], description: 'A blue book cover.' },
@@ -1383,7 +1371,7 @@ export const slugToCategory: Record<string, string> = Object.fromEntries(
 );
 
 export function twemojiUrl(codepoint: string): string {
-  return `https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/72x72/${codepoint}.png`;
+  return `https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/${codepoint}.png`;
 }
 
 export function emojiSlug(name: string): string {

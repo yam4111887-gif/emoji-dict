@@ -25,8 +25,8 @@ export default function PrivacyPage() {
       <h2 className='text-xl font-bold text-slate-900 mt-6 mb-2'>5. Data Retention</h2>
       <p className='text-slate-600 mb-4'>We do not retain any personal data. Anonymous analytics data is retained by Google Analytics and Microsoft Clarity according to their respective policies (typically 14-26 months).</p>
 
-      <h2 className='text-xl font-bold text-slate-900 mt-6 mb-2'>6. Your Rights (GDPR)</h2>
-      <p className='text-slate-600 mb-4'>Under the GDPR, you have the right to access, rectify, erase, or restrict the processing of your personal data. Since we do not collect personal data, these rights are primarily exercised through your cookie consent choices. You can withdraw consent at any time by clearing your browser cookies.</p>
+      <h2 className='text-xl font-bold text-slate-900 mt-6 mb-2'>6. Your Rights (GDPR & CCPA)</h2>
+      <p className='text-slate-600 mb-4'>Under the GDPR (EU), you have the right to access, rectify, erase, or restrict the processing of your personal data. Under the CCPA (California), you have the right to know what personal information is collected, request deletion, and opt-out of the sale of personal information. Since we do not collect, sell, or share personal data, these rights are primarily exercised through your cookie consent choices. You can withdraw consent at any time by clearing your browser cookies.</p>
 
       <h2 className='text-xl font-bold text-slate-900 mt-6 mb-2'>7. Children&apos;s Privacy</h2>
       <p className='text-slate-600 mb-4'>EmojiDict does not knowingly collect any data from children under 16. The site is suitable for all ages.</p>

@@ -1,5 +1,5 @@
 import { emojis, categories, categorySlugs, twemojiUrl, getCategoryCount } from '@/data/emojis';
-import { Smile, Cat, Apple, Trophy, Plane, Lightbulb, Heart, Flag, Search, ArrowRight } from 'lucide-react';
+import { Smile, Cat, Apple, Trophy, Plane, Lightbulb, Heart, Flag, Search, ArrowRight, Target, Rocket } from 'lucide-react';
 import { AdSlot } from '@/components/ui/AdSlot';
 import Link from 'next/link';
 import { locales, type Locale, t } from '@/lib/i18n';
@@ -83,11 +83,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {/* Quiz CTA */}
       <section className="px-4">
         <div className="max-w-3xl mx-auto bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl p-8 text-center text-white">
-          <div className="text-5xl mb-3">🎯</div>
-          <h2 className="text-2xl font-bold mb-2">Test Your Emoji Knowledge!</h2>
-          <p className="text-amber-50 mb-4">Take our fun emoji quiz and see how many you can guess correctly!</p>
-          <Link href={`/${loc}/quiz`} className="inline-block px-6 py-3 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition shadow-lg">
-            🚀 Start Quiz
+          <div className="mb-3 flex justify-center"><Target size={48} className="text-white" /></div>
+          <h2 className="text-2xl font-bold mb-2">{loc === 'en' ? 'Test Your Emoji Knowledge!' : loc === 'zh-TW' ? '測試你的表情符號知識！' : loc === 'es' ? '¡Pon a prueba tu conocimiento!' : loc === 'ja' ? '絵文字の知識をテスト！' : 'Test Your Emoji Knowledge!'}</h2>
+          <p className="text-amber-50 mb-4">{loc === 'en' ? 'Take our fun emoji quiz and see how many you can guess correctly!' : loc === 'zh-TW' ? '參加有趣的測驗，看看你能猜對幾個！' : loc === 'es' ? '¡Haz nuestro divertido quiz y averigua cuántos puedes adivinar!' : loc === 'ja' ? '楽しいクイズで何個正解できるか挑戦！' : 'Take our fun emoji quiz and see how many you can guess correctly!'}</p>
+          <Link href={`/${loc}/quiz`} className="inline-flex items-center gap-2 px-6 py-3 bg-white text-amber-600 font-semibold rounded-xl hover:bg-amber-50 transition shadow-lg">
+            <Rocket size={18} /> {loc === 'en' ? 'Start Quiz' : loc === 'zh-TW' ? '開始測驗' : loc === 'es' ? 'Comenzar' : loc === 'ja' ? 'クイズ開始' : 'Start Quiz'}
           </Link>
         </div>
       </section>

@@ -21,7 +21,7 @@ export function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900 mb-3">Legal</h3>
+            <h3 className="text-sm font-bold text-slate-900 mb-3">{t(loc, 'footer.legal' as any) || 'Legal'}</h3>
             <ul className="space-y-1.5">
               <li><Link href={`/${locale}/privacy`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.privacy')}</Link></li>
               <li><Link href={`/${locale}/terms`} className="text-xs text-slate-500 hover:text-amber-600">{t(loc, 'nav.terms')}</Link></li>
@@ -30,7 +30,7 @@ export function Footer({ locale }: { locale: string }) {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900 mb-3">Credits</h3>
+            <h3 className="text-sm font-bold text-slate-900 mb-3">{t(loc, 'footer.credits' as any) || 'Credits'}</h3>
             <p className="text-xs text-slate-500">{t(loc, 'footer.twemoji')}</p>
             <p className="text-xs text-slate-500 mt-1">{t(loc, 'footer.disclaimer')}</p>
             <p className="text-xs text-slate-500 mt-1">
